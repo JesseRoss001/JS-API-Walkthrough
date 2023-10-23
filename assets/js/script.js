@@ -1,5 +1,5 @@
 const API_KEY = "xvufK8B2JIERzCqJvO6nJlZRs84";
-const API_URL ="https://ci-jshint.herokuapp.com/";
+const API_URL ="https://ci-jshint.herokuapp.com/api";
 const resultsModal =new bootstrap.Modal(document.getElementById("resultsModal")); 
 
 document.getElementById("status").addEventListener("click",e => getStatus(e));
@@ -12,6 +12,6 @@ async function getStatus(e) {
     const data = await response.json();
 
     if (response.ok) {
-        console.log(data);
+        console.log(data.expiry);
     }
 }
